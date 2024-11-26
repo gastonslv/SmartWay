@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Way</h1>
+    </header>
+    <main>
+        <h4>Initial configuration of automatic irrigation</h4>
+
+        <form id="form_configuration">
+            <select id="select_valves">
+                <option value="-1" selected> Select the number of valves</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <select id="select_flow">
+                <option value="-1">Select flow [1 L/s - 8 L/s]</option>
+                <option value="1">1 L/s</option>
+                <option value="2">2 L/s</option>
+                <option value="3">3 L/s</option>
+                <option value="4">4 L/s</option>
+                <option value="5">5 L/s</option>
+                <option value="6">6 L/s</option>
+                <option value="7">7 L/s</option>
+                <option value="8">8 L/s</option>
+            </select>
+            <select id="select_hour_start"></select>
+            <select id="select_minutes_start"></select>
+            <select id="select_hour_end"></select>
+            <select id="select_minutes_end"></select>
+            <button type="submit" id="btn_submit">Confirmar</button>
+        </form>
+    </main>
+    <footer></footer> 
+
+    <script src="./src/script_select_schedules.js"></script>
+    <script src="./src/script.js"></script>
+
+</body>
+</html>

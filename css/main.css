@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: "QuickSand", sans-serif;
+    font-optical-sizing: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    margin: 0 2.5% 0 2.5%;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 
+    "title"
+    "form";
+}
+
+form {
+    grid-area: form;
+    display: grid;
+    margin: 0 20% 0 20%;
+    gap: 5%;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "valves valves"
+    "flow flow"
+    "i_hour i_minute"
+    "e_hour e_minute"
+    "btn_submit btn_submit";
+}
+
+h4 {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    border-radius: 5%;
+    text-align: center;
+    height: 4rem;
+    box-shadow:  2px 4px 6px rgba(0, 0, 0, 0.3)
+}
+
+#select_valves {
+    grid-area:  valves;
+}
+
+#select_flow {
+    grid-area: flow;
+}
+
+#select_hour_start {
+    grid-area: i_hour;
+}
+
+#select_minutes_start {
+    grid-area: i_minute;
+}
+
+#select_hour_end {
+    grid-area: e_hour;
+}
+
+#select_minutes_end {
+    grid-area: e_minute;
+}
+
+#btn_submit {
+    grid-area: btn_submit;
+    border: 1px solid grey;
+    border-radius: 5%;
+    height: 3rem;
+    background-color: beige;
+    box-shadow:  2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    grid-area: footer;
+}
+
