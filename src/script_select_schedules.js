@@ -3,10 +3,10 @@ const select_minutes_start = document.getElementById("select_minutes_start");
 const select_hour_end = document.getElementById("select_hour_end");
 const select_minutes_end = document.getElementById("select_minutes_end");
 
-let s_h_s = '<option value="-1"> Initial Hour </option>';
-let s_m_s = '<option value="-1"> Initial Minute </option>';
-let s_h_e = '<option value="-1"> End hour</option>';
-let s_m_e = '<option value="-1"> End Minute </option>';
+let s_h_s = '<option value="-1" selected> Initial Hour </option>';
+let s_m_s = '<option value="-1" selected> Initial Minute </option>';
+let s_h_e = '<option value="-1" selected> End hour</option>';
+let s_m_e = '<option value="-1" selected> End Minute </option>';
 
 for (let h = 0; h < 24; h++)  {
     const formatted_hour = h.toString().padStart(2, "0");
