@@ -1,4 +1,4 @@
-//import { Valve } from "./valve.js";
+import { Valve } from "./valve.js";
 
 const form = document.getElementById("form_configuration");
 
@@ -18,9 +18,31 @@ form.addEventListener('submit', (e) => {
         if (valves == -1 || flow == -1) {
             alert("Select a valid option in valves and flow rate");
         } else {
+            let valves_list = [];
+
+            const hour_start_string = document.getElementById("select_hour_start").value;
+            const minutes_start_string = document.getElementById("select_minutes_start").value;
+            let res_start = hour_start_string + ":" + minutes_start_string;
+            const hour_end_string = document.getElementById("select_hour_end").value;
+            const minutes_end_string = document.getElementById("select_minutes_end").value;
+            let res_end = hour_end_string + ":" + minutes_end_string;
+
+            for (let id = 1; id <= valves; id++) {
+                valves_list.push(new Valve(id, res_start, res_end, flow));
+            }
+
+            for (let valve of valves_list) {
+                console.log (
+                    valve.id_valve + "\n" +
+                    valve.start_time + "\n" +
+                    valve.end_time + "\n" +
+                    valve.flow + "\n\n"
+                );
+            }
             
-            window.location.href = "./pages/valves.html";
-        }   
+
+            //window.location.href = "./pages/valves.html";
+        }
     }
 
 });
