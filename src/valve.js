@@ -6,8 +6,6 @@ export class Valve {
         this.end_time = end_time;
         this.flow = flow;
     }
-
-    
 }
 
 
